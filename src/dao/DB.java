@@ -6,18 +6,12 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 public class DB {
-
-    //POUR LA CONNECTION
     private Connection conn;
-    //POUR LES RESULTATS DES REQUETES DE TYPE SELECT
     private ResultSet rs;
-    //POUR LES REQUETES PREPARES
     private PreparedStatement pstm;
-    //POUR LES RESULTATS DES REQUETES DE TYPPES MISE A JOUR
     private int ok;
 
     private void  getConnection(){
-        //parametres de connection
         String host = "localhost";
         String database = "gestion_utils";
         int port = 3306;
@@ -25,7 +19,6 @@ public class DB {
         String user = "root";
         String password = "";
         try {
-            //chargement du pilote
             Class.forName("com.mysql.jdbc.Driver");
             conn = DriverManager.getConnection(url,user,password);
             System.out.println("Connexion reussie !");
