@@ -53,12 +53,12 @@ public class User {
         User user = new User();
         UserImpl iuser = new UserImpl();
         Scanner scan = new Scanner(System.in);
-        PasswordHashing passwordHasheds = new PasswordHashing();
+        PasswordHashing passwordHas = new PasswordHashing();
         System.out.println("Donner l'email du user");
         email = scan.nextLine();
         System.out.println("Donner le mot de passe");
         password = scan.nextLine();
-        passwordHashed = passwordHasheds.generatePasswordHash(password,"1234567890ABCDEF" );
+        passwordHashed = passwordHas.PasswordHashed(password,"1234567890ABCDEF" );
         System.out.println("User cree avec succes");
         this.id = user.getId();
         int RoleId = iuser.ExistRole();
